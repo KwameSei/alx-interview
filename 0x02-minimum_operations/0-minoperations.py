@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Creating a function that returns minimum number
     of operations needed to result in exactly n H characters.
 """
