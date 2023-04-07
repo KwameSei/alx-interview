@@ -7,14 +7,14 @@
 def prime_factorization(n):
     """ Returning prime factors of n """
     list_factors = []
-    num = n
+    mul_num = (n // 2) + 1
 
-    for item in range(2, num // 2):
-        if (num % item) == 0:
+    for item in range(2, int(mul_num)):
+        if (n % item) == 0:
             list_factors.append(item)
-            num = num // item
+            n = n // item
             item = 2
-    list_factors.append(num)
+    list_factors.append(n)
     return list_factors
 
 
