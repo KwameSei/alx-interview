@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Script that reads stdin line by line and computes metrics"""
-from sys import stdin
+import sys
 
 
 # input_data = '99.246.102.137 - [2023-04-13 18:16:05.469216]
@@ -9,6 +9,7 @@ all_codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 count = 0
 filesize = 0
 max_size = 0    # Total file size
+stdin = sys.stdin
 
 try:
     for each_line in stdin:     # Reading the contents of the file line by by
@@ -25,7 +26,6 @@ try:
 
             for item, counter in all_codes.items():
                 print(f"{item}: {counter}")
-
 except KeyboardInterrupt as error:
     print(f"File size: {max_size}")
 
