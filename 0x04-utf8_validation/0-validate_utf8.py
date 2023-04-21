@@ -17,11 +17,11 @@ def validUTF8(data):
         # Checking how many bytes there are in the current character
         # Checking if bytes are leading or continuation bytes
         if index >> 5 == 0b110:
-            count += 1
-        elif index >> 4 == 0b1110:
             count += 2
-        elif index >> 3 == 0b11110:
+        elif index >> 4 == 0b1110:
             count += 3
+        elif index >> 3 == 0b11110:
+            count += 4
         elif index >> 7 == 0:
             count += 1
         else:
