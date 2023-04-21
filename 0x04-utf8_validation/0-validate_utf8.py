@@ -26,7 +26,7 @@ def validUTF8(data):
             count += 1
         else:
             if index >> 6 != 0b10:
-                count += 1
+                count -= 1
             return False
 
     # It's not a valid UTF-8 encoding if there is any bytes still counting
