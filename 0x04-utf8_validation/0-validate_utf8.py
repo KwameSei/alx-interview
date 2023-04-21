@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 method that determines if a given data set represents a valid UTF-8 encoding.
 """
-
-from typing import List
 
 
 def validUTF8(data):
@@ -11,7 +9,8 @@ def validUTF8(data):
     count = 0
     index = 0
 
-    while count < len(data):
+    # while count < len(data):
+    for index in range(len(data)):
         index = data[count]
 
         # Using bit shifting to extract relevant bits from each byte
