@@ -47,6 +47,8 @@ def nQueen(board, col):
     """ Solve the N-queens puzzle """
     # Base case: If all queens are placed, return True
     if col >= len(board):
+        printBoard(board)
+        print()
         return True
 
     # Consider this column and try placing this queen in all rows one by one
