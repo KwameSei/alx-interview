@@ -62,7 +62,7 @@ def nQueen(board, col):
             # If placing queen in board[row][col] doesn't lead to a solution
             # then remove queen from board[row][col]
             # board[row][col] = 0
-            board.pop()
+            board[row][col] = 0
 
     # If the queen can not be placed in any row in the column, return False
     return False
