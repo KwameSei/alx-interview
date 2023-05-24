@@ -16,14 +16,18 @@ def island_perimeter(grid):
                 if row_index > 0 and row_index < (len(grid) - 1):
                     if grid[row_index + 1][col_index] == 0:
                         perimeter += 1
+                    else: perimeter += 0
 
                     if grid[row_index - 1][col_index] == 0:
                         perimeter += 1
+                    else: perimeter += 0
 
                     if row[col_index + 1] == 0:
                         perimeter += 1
+                    else: perimeter += 0
 
                     if row[col_index - 1] == 0:
                         perimeter += 1
+                    else: perimeter += 0
 
     return perimeter
