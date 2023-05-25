@@ -10,7 +10,7 @@ def island_perimeter(grid):
 
     for row_index, row in enumerate(grid):
         for col_index, col in enumerate(row):
-            if col == 1:
+            if grid[row_index][col_index] == 1:
                 # Calculate the perimeter for each land cell
 
                 # Check the cell above
