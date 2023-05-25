@@ -3,31 +3,31 @@
 
 
 def island_perimeter(grid):
-    """Finding the perimeter of an island"""
-    row_index = 0
-    col_index = 0
+    """ Finding the perimeter of an island """
     perimeter = 0
 
-    for row_index, row in enumerate(grid):
-        for col_index, col in enumerate(row):
+    # Iterate through each row and column index using range
+    for row_index in range(len(grid)):
+        for col_index in range(len(grid[row_index])):
             if grid[row_index][col_index] == 1:
                 # Calculate the perimeter for each land cell
 
                 # Check the cell above
-                if row_index > 0 and grid[row_index - 1][col_index] == 0:
+                if row_index == 0 or grid[row_index - 1][col_index] == 0:
                     perimeter += 1
 
                 # Check the cell below
-                if row_index < len(grid) - 1 and\
+                if row_index == len(grid) - 1 or\
                         grid[row_index + 1][col_index] == 0:
                     perimeter += 1
 
-                # Check the cell to the right
-                if col_index < len(row) - 1 and row[col_index + 1] == 0:
+                # Check the cell to the left
+                if col_index == 0 or grid[row_index][col_index - 1] == 0:
                     perimeter += 1
 
-                # Check the cell to the left
-                if col_index > 0 and row[col_index - 1] == 0:
+                # Check the cell to the right
+                if col_index == len(grid[row_index]) - 1 or\
+                        grid[row_index][col_index + 1] == 0:
                     perimeter += 1
 
     return perimeter
